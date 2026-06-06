@@ -1,0 +1,170 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-200;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+}
+
+@layer components {
+  /* Glass Panel Effect */
+  .glass-panel {
+    @apply bg-gray-900/50 backdrop-blur-sm border border-gray-800;
+  }
+
+  /* Stat Card */
+  .stat-card {
+    @apply bg-gray-900 rounded-lg border border-gray-800 p-4 hover:border-gray-700 transition-all;
+  }
+
+  /* Responsive Dashboard Grid */
+  .dashboard-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6;
+  }
+
+  /* Speech Card */
+  .speech-card {
+    @apply bg-gray-900 rounded-lg border-l-4 p-4 transition-all;
+  }
+
+  .speech-card-positive {
+    border-left-color: #10b981;
+  }
+
+  .speech-card-negative {
+    border-left-color: #ef4444;
+  }
+
+  .speech-card-neutral {
+    border-left-color: #6b7280;
+  }
+
+  /* Responsive Button */
+  .btn-primary {
+    @apply px-3 py-1.5 md:px-4 md:py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-all font-medium text-sm md:text-base;
+  }
+
+  .btn-secondary {
+    @apply px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg transition-all text-sm md:text-base;
+  }
+
+  .btn-outline {
+    @apply px-3 py-1.5 md:px-4 md:py-2 border border-gray-700 hover:border-primary-500 text-gray-300 hover:text-primary-400 rounded-lg transition-all text-sm md:text-base;
+  }
+
+  /* Responsive Typography */
+  .heading-1 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold text-white;
+  }
+
+  .heading-2 {
+    @apply text-lg md:text-xl lg:text-2xl font-semibold text-white;
+  }
+
+  .heading-3 {
+    @apply text-base md:text-lg font-semibold text-white;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu-open {
+    @apply fixed inset-0 z-50 bg-gray-950 transform transition-transform duration-300;
+  }
+
+  .mobile-menu-closed {
+    @apply fixed inset-0 z-50 bg-gray-950 transform -translate-x-full transition-transform duration-300;
+  }
+}
+
+/* Responsive Container */
+.container-responsive {
+  @apply px-3 sm:px-4 md:px-6 lg:px-8 mx-auto max-w-full;
+}
+
+/* Responsive Hide/Show */
+.hide-on-mobile {
+  @apply hidden md:block;
+}
+
+.show-on-mobile {
+  @apply block md:hidden;
+}
+
+/* Touch-friendly tap targets */
+.tap-target {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Responsive Charts Container */
+.chart-container {
+  @apply w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px];
+}
+
+/* 3D Container Responsive */
+.chamber-container {
+  @apply w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px];
+}
+
+/* Responsive Modal */
+.modal-content {
+  @apply w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] max-w-4xl mx-auto;
+}
+
+/* Bottom Navigation for Mobile */
+.bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 flex justify-around items-center py-2 z-40 md:hidden;
+}
+
+.bottom-nav-item {
+  @apply flex flex-col items-center justify-center p-2 text-gray-400 hover:text-primary-400 transition-colors;
+}
+
+.bottom-nav-item-active {
+  @apply text-primary-500;
+}
+
+/* Swipeable Panel */
+.swipeable-panel {
+  @apply fixed bottom-0 left-0 right-0 bg-gray-900 rounded-t-2xl shadow-xl transform transition-transform duration-300 z-50;
+}
+
+.swipeable-panel-closed {
+  @apply translate-y-full;
+}
+
+.swipeable-panel-open {
+  @apply translate-y-0;
+}

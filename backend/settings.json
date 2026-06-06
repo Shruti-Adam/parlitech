@@ -1,0 +1,11 @@
+{
+  "theme": "light",
+  "voice_speed": 0.85,
+  "voice_volume": 1.0,
+  "voice_pitch": 1.0,
+  "auto_scroll": true,
+  "realtime_updates": true,
+  "api_url": "http://localhost:8000",
+  "notifications_enabled": true,
+  "updated_at": "2026-06-05T20:35:45.726293"
+}
