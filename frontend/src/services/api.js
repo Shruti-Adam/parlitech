@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = localStorage.getItem('api_url') || 'http://localhost:8000';
+const API_BASE_URL = localStorage.getItem('api_url') || 'https://parlitech.onrender.com';
 
 const api = axios.create({
   baseURL: `${API_BASE_URL}/api`,

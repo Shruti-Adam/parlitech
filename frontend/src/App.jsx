@@ -29,7 +29,7 @@ import DebateControls from './components/voice/DebateControls';
 import { useSpeechSynthesis } from './hooks/useSpeechSynthesis';
 import { settingsAPI } from './services/api';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://parlitech.onrender.com';
 
 function App() {
   const [activePage, setActivePage] = useState('dashboard');

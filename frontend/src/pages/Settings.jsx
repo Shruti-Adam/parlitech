@@ -13,7 +13,7 @@ const Settings = () => {
     voice_pitch: 1.0,
     auto_scroll: true,
     realtime_updates: true,
-    api_url: 'http://localhost:8000',
+    api_url: 'https://parlitech.onrender.com',
     notifications_enabled: true
   });
 

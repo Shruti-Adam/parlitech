@@ -34,7 +34,7 @@ const ResearchCenter = ({ debateData }) => {
 {`@misc{parlitech2024,
   title={ParliTech: AI-Powered Parliamentary Intelligence},
   year={2024},
-  howpublished={\\url{http://localhost:8000}}
+  howpublished={\\url{https://parlitech.onrender.com}}
 }`}
               </pre>
             </div>
